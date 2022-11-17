@@ -1,4 +1,4 @@
-require_relative './base_decorator.rb'
+require_relative './base_decorator'
 class TrimDecorator < BaseDecorator
   def correct_name
     @nameablestore.correct_name[0..10] if
