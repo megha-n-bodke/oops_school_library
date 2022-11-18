@@ -7,7 +7,7 @@ class Classroom
   attr_accessor :label
 
   def add_student(student)
-    @students.push(student)
-    students.classroom = self
+    @student.push(student)
+    student.classroom = self
   end
 end
