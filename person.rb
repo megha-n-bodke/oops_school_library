@@ -10,6 +10,7 @@ class Person < Nameable
     @name = name
     @age = age
     @parent_permission = parent_permission
+    @rentals = []
   end
 
   def of_age?
@@ -24,5 +25,10 @@ class Person < Nameable
 
   def correct_name
     @name
+  end
+
+  def add_rental(rentals)
+    @rentals.push(rentals)
+    rentals.person = self
   end
 end
