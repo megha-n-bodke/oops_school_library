@@ -17,11 +17,11 @@ def menu
 end
 
 def options
-  option = gets.chomp
+  gets.chomp.to_i
 end
 
-def input_match(selected_option)
-  case selected_option
+def input_match(num)
+  case num
   when '1'
     puts 'option 1'
     @functions.book_list
@@ -37,21 +37,20 @@ def input_match(selected_option)
   when '6'
     @functions.list_rentals_by_person_id
   when '7'
-    @functions.exit
+    @functions.exit_app
   else
     puts 'Invalid Option: Please try again'
   end
 end
 
-
 def main(status)
-    loop do
-       break unless status
-            menu
-            user_input = options
-            input_match(user_input)
-        end
-end
+  loop do
+    break unless status
 
+    menu
+    user_input = options
+    input_match(user_input)
+  end
+end
 
 main(true)
