@@ -17,7 +17,7 @@ def menu
 end
 
 def options
-  gets.chomp.to_i
+  gets.chomp.to_s
 end
 
 def input_match(num)
