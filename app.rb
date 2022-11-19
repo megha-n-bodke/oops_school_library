@@ -8,6 +8,7 @@ require_relative './base_decorator'
 require_relative './capitalize_decorator'
 require_relative './trimmer_decorator'
 require_relative './nameable'
+require 'pry'
 
 class App
   attr_accessor :books, :people, :rentals
@@ -49,6 +50,7 @@ class App
     name = gets.chomp
     print 'Age: '
     age = gets.chomp
+
     print 'Student classroom: '
     classroom = gets.chomp
     print 'Has parent permission? [Y/N]: '
