@@ -71,16 +71,6 @@ After you're finished please remove all the comments and instructions!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- LIVE DEMO -->
-
-## 🚀 Live Demo <a name="live-demo"></a>
-
-> Add a link to your deployed project.
-
-- [Live Demo Link](https://yourdeployedapplicationlink.com)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 <!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
@@ -135,16 +125,6 @@ To run tests, run the following command:
   bin/rails test test/models/article_test.rb
 ```
 
-### Deployment
-
-You can deploy this project using:
-
-```sh
-
-```
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 <!-- AUTHORS -->
 
 ## 👥 Authors <a name="authors"></a>
@@ -162,17 +142,10 @@ You can deploy this project using:
 - Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- FUTURE FEATURES -->
-
-## 🔭 Future Features <a name="future-features"></a>
-
-> Describe 1 - 3 features you will add to the project.
-
-- [ ] **[new_feature_1]**
-- [ ] **[new_feature_2]**
-- [ ] **[new_feature_3]**
+- GitHub:
+  [@sharon kessio](https://github.com/kessio)
+- Twitter: [@sharon kessio](https://twitter.com/kessio_sharon)
+- LinkedIn: [sharon-kessio](https://www.linkedin.com/in/sharon-kessio-172220b5)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -204,23 +177,14 @@ If you like this project...
 
 I would like to thank...
 
+- Thanks to [Microverse](https://www.microverse.org/) for giving this opportunity to learn ...
+- Code Reviewers & Coding Partners.
+- Hat tip to anyone whose code was used.
+- Inspiration.
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FAQ (optional) -->
-
-## ❓ FAQ <a name="faq"></a>
-
-> Add at least 2 questions new developers would ask when they decide to use your project.
-
-- **[Question_1]**
-
-  - [Answer_1]
-
-- **[Question_2]**
-
-  - [Answer_2]
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LICENSE -->
 
