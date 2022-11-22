@@ -15,12 +15,9 @@ def menu
   puts "\n"
 end
 
-def main 
+def main
   app = App.new
   app.run
 end
 
 main
-
-
-
