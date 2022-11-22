@@ -1,5 +1,4 @@
 require_relative './app'
-@functions = App.new
 
 def menu
   puts 'Welcome to School Library App!!!!'
@@ -16,41 +15,9 @@ def menu
   puts "\n"
 end
 
-def options
-  gets.chomp.to_s
+def main
+  app = App.new
+  app.run
 end
 
-def input_match(num)
-  case num
-  when '1'
-    puts 'option 1'
-    @functions.book_list
-
-  when '2'
-    @functions.people_list
-  when '3'
-    @functions.create_person
-  when '4'
-    @functions.create_book
-  when '5'
-    @functions.create_rental
-  when '6'
-    @functions.list_rentals_by_person_id
-  when '7'
-    @functions.exit_app
-  else
-    puts 'Invalid Option: Please try again'
-  end
-end
-
-def main(status)
-  loop do
-    break unless status
-
-    menu
-    user_input = options
-    input_match(user_input)
-  end
-end
-
-main(true)
+main

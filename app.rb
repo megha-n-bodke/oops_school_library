@@ -8,6 +8,7 @@ require_relative './base_decorator'
 require_relative './capitalize_decorator'
 require_relative './trimmer_decorator'
 require_relative './nameable'
+require 'pry'
 
 class App
   attr_accessor :books, :people, :rentals
@@ -49,6 +50,7 @@ class App
     name = gets.chomp
     print 'Age: '
     age = gets.chomp
+
     print 'Student classroom: '
     classroom = gets.chomp
     print 'Has parent permission? [Y/N]: '
@@ -155,5 +157,39 @@ class App
   def exit_app
     puts 'Thank you for using this app!'
     exit(true)
+  end
+
+  def input_match(num)
+    case num
+    when '1'
+      puts 'option 1'
+      book_list
+
+    when '2'
+      people_list
+    when '3'
+      create_person
+    when '4'
+      create_book
+    when '5'
+      create_rental
+    when '6'
+      list_rentals_by_person_id
+
+    else
+      puts 'Invalid Option: Please try again'
+    end
+  end
+
+  def run
+    loop do
+      menu
+      option = gets.chomp
+      if option == '7'
+        puts 'Thank you for using this app!'
+        break
+      end
+      input_match(option)
+    end
   end
 end
