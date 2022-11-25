@@ -8,6 +8,7 @@ require_relative './base_decorator'
 require_relative './capitalize_decorator'
 require_relative './trimmer_decorator'
 require_relative './nameable'
+require_relative './data_store'
 require 'pry'
 
 class App
@@ -17,8 +18,27 @@ class App
     @people = []
     @books = []
     @rentals = []
-    @person = nil
-    @book = nil
+
+    @people_store = DataStore.new('people')
+    @people = @people_store.read.map do |person|
+      if person['type'] == 'Student'
+        Student.new(person['classroom'], person['age'], person['name'], parent_permission: person['parent_permission'])
+      else
+
+        Teacher.new(person['specialization'], person['age'], person['name'],
+                    parent_permission: person['parent_permission'])
+      end
+    end
+
+    @books_store = DataStore.new('books')
+    @books = @books_store.read.map do |book|
+      Book.new(book['title'], book['author'])
+    end
+    p @books
+    @rentals_store = DataStore.new('rentals')
+    @rentals = @rentals_store.read.map do |rental|
+      Rental.new(rental['date'], @books[0], @people[0])
+    end
   end
 
   # book list
@@ -181,12 +201,19 @@ class App
     end
   end
 
+  def close
+    @people_store.write(@people.map(&:create_json))
+    @books_store.write(@books.map(&:create_json))
+    @rentals_store.write(@rentals.map(&:create_json))
+  end
+
   def run
     loop do
       menu
       option = gets.chomp
       if option == '7'
         puts 'Thank you for using this app!'
+        close
         break
       end
       input_match(option)
