@@ -18,7 +18,7 @@ class App
     @people = []
     @books = []
     @rentals = []
-    
+
     @people_store = DataStore.new('people')
     @people = @people_store.read.map do |person|
       if person['type'] == 'Student'
@@ -27,14 +27,13 @@ class App
 
         Teacher.new(person['specialization'], person['age'], person['name'],
                     parent_permission: person['parent_permission'])
-        end
+      end
     end
 
     @books_store = DataStore.new('books')
     @books = @books_store.read.map do |book|
       Book.new(book['title'], book['author'])
     end
-
   end
 
   # book list
@@ -197,8 +196,7 @@ class App
     end
   end
 
-  
-def close
+  def close
     @people_store.write(@people.map(&:create_json))
     @books_store.write(@books.map(&:create_json))
   end

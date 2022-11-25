@@ -18,6 +18,6 @@ class Student < Person
   end
 
   def create_json
-    super.merge({type:self, classroom:@classroom})
+    super.merge({ type: self, classroom: @classroom })
   end
 end

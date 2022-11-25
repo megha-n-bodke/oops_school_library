@@ -31,6 +31,7 @@ class Person < Nameable
     @rentals.push(rentals)
     rentals.person = self
   end
+
   def create_json
     {
       id: @id,
