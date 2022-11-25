@@ -34,6 +34,12 @@ class App
     @books = @books_store.read.map do |book|
       Book.new(book['title'], book['author'])
     end
+    p @books
+    @rentals_store = DataStore.new('rentals')
+    @rentals = @rentals_store.read.map do |rental|
+      Rental.new(rental['date'], @books[0], @people[0])
+    end
+
   end
 
   # book list
@@ -199,6 +205,7 @@ class App
   def close
     @people_store.write(@people.map(&:create_json))
     @books_store.write(@books.map(&:create_json))
+    @rentals_store.write(@rentals.map(&:create_json))
   end
 
   def run
