@@ -11,6 +11,6 @@ class Teacher < Person
   end
 
   def create_json
-    super.merge({type:self, specialization: @specialization})
+    super.merge({type:self, specialization:@specialization})
   end
 end

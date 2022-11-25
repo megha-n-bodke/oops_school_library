@@ -11,4 +11,11 @@ class Book
   def add_rental(person, date)
     Rental.new(person, date, self)
   end
+
+  def create_json
+    {
+      title: @title,
+      author: @author
+    }
+  end
 end
