@@ -1,6 +1,6 @@
-require_relative './person'
-require_relative './classroom'
-require_relative './teacher'
+require_relative '../person'
+require_relative '../classroom'
+require_relative '../teacher'
 
 describe Teacher do
     before :each do
