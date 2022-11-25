@@ -31,4 +31,12 @@ class Person < Nameable
     @rentals.push(rentals)
     rentals.person = self
   end
+  def create_json
+    {
+      id: @id,
+      name: @name,
+      age: @age,
+      parent_permission: @parent_permission
+    }
+  end
 end
